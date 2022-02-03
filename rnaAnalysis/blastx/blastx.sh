@@ -12,7 +12,7 @@
 
 cd $SLURM_SUBMIT_DIR
 
-
 ml BLAST+/2.9.0-gompi-2019b
 
-blastx -query 52610.2.393694.AGGAACCT-AGGAACCT.filter-MTF.fasta -out blastxOutputtest020222.txt -db /db/ncbiblast/refseq/03312020/refseq_protein -outfmt "6 qseqid stitle sseqid pident length mismatch gapopen evalue bitscore"
+export BLASTDB="/db/ncbiblast/20220201/" 
+blastx -query 52610.2.393694.AGGAACCT-AGGAACCT.filter-MTF.fasta -out blastxOutputtest020222.txt -db refseq_protein -outfmt "6 qseqid stitle sseqid pident length mismatch gapopen evalue bitscore"
